@@ -20,13 +20,14 @@ fun Application.module(testing: Boolean = false) {
             providerLookup = {
                 OAuthServerSettings.OAuth2ServerSettings(
                     name = "auth0",
-                    authorizeUrl = "https://matthewcasperson.au.auth0.com/login/oauth/authorize",
-                    accessTokenUrl = "https://matthewcasperson.au.auth0.com/oauth/access_token",
+                    authorizeUrl = "https://matthewcasperson.au.auth0.com/authorize",
+                    accessTokenUrl = "https://matthewcasperson.au.auth0.com/oauth/token",
+                    requestMethod = HttpMethod.Post,
                     clientId = System.getenv("CLIENT_ID"),
                     clientSecret = System.getenv("CLIENT_SECRET")
                 )
             }
-            urlProvider = { "/login/auth0" }
+            urlProvider = { "http://localhost:8080/api/messages/admin" }
         }
     }
 
@@ -53,7 +54,7 @@ fun Application.module(testing: Boolean = false) {
         authenticate("auth0") {
             get("/api/messages/admin") {
                 call.respondText(
-                    """"{"message": "The API successfully recognized you as an admin."}""",
+                    """{"message": "The API successfully recognized you as an admin."}""",
                     contentType = ContentType.Application.Json
                 )
             }
