@@ -14,7 +14,7 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 fun validateCreds(credential: JWTCredential, scope: String? = null): JWTPrincipal? {
     val containsAudience = credential.payload.audience.contains(System.getenv("AUDIENCE"))
     val containsScope = scope.isNullOrBlank() ||
-            credential.payload.claims["scopes"]?.asString()?.split(" ")
+            credential.payload.claims["scope"]?.asString()?.split(" ")
                 ?.contains("read:admin-messages") == true
 
     if (containsAudience && containsScope) {
