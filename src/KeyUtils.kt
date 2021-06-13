@@ -1,7 +1,6 @@
 package com.mathewceron
 
 import java.io.InputStream
-import java.security.PublicKey
 import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
 import java.security.interfaces.RSAPublicKey

@@ -23,12 +23,14 @@ fun Application.module() {
     install(Authentication) {
         jwt("auth0") {
             verifier(verifier)
-            validate { credential ->  JWTPrincipal(credential.payload)}
+            validate { credential -> JWTPrincipal(credential.payload) }
         }
         jwt("auth0-admin") {
             verifier(verifier)
             validate { credential ->
-                if (credential.payload.claims["scopes"]?.asString()?.split(" ")?.contains("read:admin-messages") == true) {
+                if (credential.payload.claims["scopes"]?.asString()?.split(" ")
+                        ?.contains("read:admin-messages") == true
+                ) {
                     JWTPrincipal(credential.payload)
                 } else {
                     null
@@ -41,7 +43,8 @@ fun Application.module() {
         get("/api/messages/public") {
             call.respondText(
                 """{"message": "The API doesn't require an access token to share this message."}""",
-                contentType = ContentType.Application.Json)
+                contentType = ContentType.Application.Json
+            )
         }
     }
 
