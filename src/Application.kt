@@ -24,8 +24,6 @@ fun validateCreds(credential: JWTCredential, scope: String? = null): JWTPrincipa
     return null
 }
 
-@Suppress("unused") // Referenced in application.conf
-@kotlin.jvm.JvmOverloads
 fun Application.module() {
 
     val jwkProvider = JwkProviderBuilder(System.getenv("ISSUER"))
