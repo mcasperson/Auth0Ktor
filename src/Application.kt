@@ -1,20 +1,18 @@
 package com.mathewceron
 
 import com.auth0.jwk.JwkProviderBuilder
-import com.auth0.jwt.JWT
-import com.auth0.jwt.algorithms.Algorithm
 import io.ktor.application.*
-import io.ktor.response.*
-import io.ktor.routing.*
-import io.ktor.http.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
+import io.ktor.http.*
+import io.ktor.response.*
+import io.ktor.routing.*
 import java.util.concurrent.TimeUnit
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 fun validateCreds(credential: JWTCredential, scope: String? = null): JWTPrincipal? {
-    val containsAudience = credential.payload.audience.contains(System.getenv("AUDIENCE"));
+    val containsAudience = credential.payload.audience.contains(System.getenv("AUDIENCE"))
     val containsScope = scope.isNullOrBlank() ||
             credential.payload.claims["scopes"]?.asString()?.split(" ")
                 ?.contains("read:admin-messages") == true
@@ -38,11 +36,11 @@ fun Application.module() {
     install(Authentication) {
         jwt("auth0") {
             verifier(jwkProvider, System.getenv("ISSUER"))
-            validate { credential -> validateCreds(credential)}
+            validate { credential -> validateCreds(credential) }
         }
         jwt("auth0-admin") {
             verifier(jwkProvider, System.getenv("ISSUER"))
-            validate { credential -> validateCreds(credential, "read:admin-messages")}
+            validate { credential -> validateCreds(credential, "read:admin-messages") }
         }
     }
 
