@@ -4,20 +4,18 @@ import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
 import io.ktor.application.*
 import io.ktor.response.*
-import io.ktor.request.*
 import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
-import io.ktor.client.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
-fun Application.module(testing: Boolean = false) {
+fun Application.module() {
     val verifier = JWT
-        .require(Algorithm.HMAC256(System.getenv("SECRET")))
+        .require(Algorithm.RSA256(readPublicKey(javaClass.getResourceAsStream("/auth0.pem")), null))
         .withAudience(System.getenv("AUDIENCE"))
         .withIssuer(System.getenv("ISSUER"))
         .build()

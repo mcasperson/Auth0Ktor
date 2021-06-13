@@ -4,6 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 val logback_version: String by project
 val ktor_version: String by project
 val kotlin_version: String by project
+val bouncy_castle_version: String by project
 
 plugins {
     application
@@ -29,6 +30,8 @@ dependencies {
     implementation("io.ktor:ktor-server-core:$ktor_version")
     implementation("io.ktor:ktor-auth:$ktor_version")
     implementation("io.ktor:ktor-auth-jwt:$ktor_version")
+    implementation("org.bouncycastle:bcprov-jdk15on:$bouncy_castle_version")
+
     testImplementation("io.ktor:ktor-server-tests:$ktor_version")
 }
 
