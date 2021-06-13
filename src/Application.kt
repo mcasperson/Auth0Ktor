@@ -1,5 +1,6 @@
 package com.mathewceron
 
+import com.auth0.jwk.JwkProviderBuilder
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
 import io.ktor.application.*
@@ -8,34 +9,40 @@ import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
+import java.util.concurrent.TimeUnit
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
+
+fun validateCreds(credential: JWTCredential, scope: String? = null): JWTPrincipal? {
+    val containsAudience = credential.payload.audience.contains(System.getenv("AUDIENCE"));
+    val containsScope = scope.isNullOrBlank() ||
+            credential.payload.claims["scopes"]?.asString()?.split(" ")
+                ?.contains("read:admin-messages") == true
+
+    if (containsAudience && containsScope) {
+        return JWTPrincipal(credential.payload)
+    }
+
+    return null
+}
 
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module() {
-    val verifier = JWT
-        .require(Algorithm.RSA256(readPublicKey(javaClass.getResourceAsStream("/auth0.pem")), null))
-        .withAudience(System.getenv("AUDIENCE"))
-        .withIssuer(System.getenv("ISSUER"))
+
+    val jwkProvider = JwkProviderBuilder(System.getenv("ISSUER"))
+        .cached(10, 24, TimeUnit.HOURS)
+        .rateLimited(10, 1, TimeUnit.MINUTES)
         .build()
 
     install(Authentication) {
         jwt("auth0") {
-            verifier(verifier)
-            validate { credential -> JWTPrincipal(credential.payload) }
+            verifier(jwkProvider, System.getenv("ISSUER"))
+            validate { credential -> validateCreds(credential)}
         }
         jwt("auth0-admin") {
-            verifier(verifier)
-            validate { credential ->
-                if (credential.payload.claims["scopes"]?.asString()?.split(" ")
-                        ?.contains("read:admin-messages") == true
-                ) {
-                    JWTPrincipal(credential.payload)
-                } else {
-                    null
-                }
-            }
+            verifier(jwkProvider, System.getenv("ISSUER"))
+            validate { credential -> validateCreds(credential, "read:admin-messages")}
         }
     }
 
