@@ -4,6 +4,7 @@ import com.auth0.jwk.JwkProviderBuilder
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
+import io.ktor.features.*
 import io.ktor.http.*
 import io.ktor.response.*
 import io.ktor.routing.*
@@ -41,6 +42,16 @@ fun Application.module() {
             validate { credential -> validateCreds(credential, "read:admin-messages") }
         }
     }
+    install(CORS) {
+        anyHost()
+        method(HttpMethod.Options)
+        method(HttpMethod.Get)
+        header("authorization")
+        allowCredentials = true
+        allowNonSimpleContentTypes = true
+
+    }
+
 
     routing {
         get("/api/messages/public") {
