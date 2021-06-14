@@ -1,4 +1,4 @@
-package com.mathewceron
+package com.matthewcasperson
 
 import com.auth0.jwk.JwkProviderBuilder
 import io.ktor.application.*
