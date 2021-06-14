@@ -16,7 +16,7 @@ fun validateCreds(credential: JWTCredential, scope: String? = null): JWTPrincipa
     val containsAudience = credential.payload.audience.contains(System.getenv("AUDIENCE"))
     val containsScope = scope.isNullOrBlank() ||
             credential.payload.claims["scope"]?.asString()?.split(" ")
-                ?.contains("read:admin-messages") == true
+                ?.contains(scope) == true
 
     if (containsAudience && containsScope) {
         return JWTPrincipal(credential.payload)
