@@ -11,7 +11,7 @@ plugins {
     kotlin("jvm") version "1.4.32"
 }
 
-group = "com.mathewceron"
+group = "com.matthewcasperson"
 version = "0.0.1-SNAPSHOT"
 
 application {
