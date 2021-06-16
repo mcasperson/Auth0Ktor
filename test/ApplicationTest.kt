@@ -1,6 +1,5 @@
-package com.mathewceron
+package com.matthewcasperson
 
-import com.matthewcasperson.module
 import io.ktor.http.*
 import io.ktor.server.testing.*
 import kotlin.test.Test
@@ -11,6 +10,12 @@ class ApplicationTest {
     fun testRoot() {
         withTestApplication({ module() }) {
             handleRequest(HttpMethod.Get, "/api/messages/public").apply {
+                assertEquals(HttpStatusCode.OK, response.status())
+            }
+            handleRequest(HttpMethod.Get, "/api/messages/protected").apply {
+                assertEquals(HttpStatusCode.OK, response.status())
+            }
+            handleRequest(HttpMethod.Get, "/api/messages/admin").apply {
                 assertEquals(HttpStatusCode.OK, response.status())
             }
         }
