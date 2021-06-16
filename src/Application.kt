@@ -12,12 +12,10 @@ import java.util.concurrent.TimeUnit
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
-fun validateCreds(credential: JWTCredential, scope: String? = null): JWTPrincipal? {
+fun validateCreds(credential: JWTCredential): JWTPrincipal? {
     val containsAudience = credential.payload.audience.contains(System.getenv("AUDIENCE"))
-    val containsScope = scope.isNullOrBlank() ||
-            credential.payload.claims["permissions"]?.asArray(String::class.java)?.contains(scope) == true
 
-    if (containsAudience && containsScope) {
+    if (containsAudience) {
         return JWTPrincipal(credential.payload)
     }
 
@@ -35,10 +33,6 @@ fun Application.module() {
         jwt("auth0") {
             verifier(jwkProvider, System.getenv("ISSUER"))
             validate { credential -> validateCreds(credential) }
-        }
-        jwt("auth0-admin") {
-            verifier(jwkProvider, System.getenv("ISSUER"))
-            validate { credential -> validateCreds(credential, "read:admin-messages") }
         }
     }
     install(CORS) {
@@ -73,7 +67,7 @@ fun Application.module() {
     }
 
     routing {
-        authenticate("auth0-admin") {
+        authenticate("auth0") {
             get("/api/messages/admin") {
                 call.respondText(
                     """{"message": "The API successfully recognized you as an admin."}""",
