@@ -12,10 +12,10 @@ import java.util.concurrent.TimeUnit
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
-fun validateCreds(credential: JWTCredential, scope: String? = null): JWTPrincipal? {
+fun validateCreds(credential: JWTCredential, permission: String? = null): JWTPrincipal? {
     val containsAudience = credential.payload.audience.contains(System.getenv("AUDIENCE"))
-    val containsScope = scope.isNullOrBlank() ||
-            credential.payload.claims["permissions"]?.asArray(String::class.java)?.contains(scope) == true
+    val containsScope = permission.isNullOrBlank() ||
+            credential.payload.claims["permissions"]?.asArray(String::class.java)?.contains(permission) == true
 
     if (containsAudience && containsScope) {
         return JWTPrincipal(credential.payload)
