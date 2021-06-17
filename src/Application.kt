@@ -39,6 +39,7 @@ fun Application.module() {
         anyHost()
         method(HttpMethod.Options)
         method(HttpMethod.Get)
+        header("authorization")
         allowCredentials = true
         allowNonSimpleContentTypes = true
 
