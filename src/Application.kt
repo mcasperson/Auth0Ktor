@@ -44,7 +44,6 @@ fun Application.module() {
 
     }
 
-
     routing {
         get("/api/messages/public") {
             call.respondText(
