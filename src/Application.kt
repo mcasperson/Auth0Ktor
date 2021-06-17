@@ -47,9 +47,7 @@ fun Application.module() {
         method(HttpMethod.Get)
         allowCredentials = true
         allowNonSimpleContentTypes = true
-
     }
-
 
     routing {
         get("/api/messages/public") {
