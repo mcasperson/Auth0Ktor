@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [ starter, add-authorization, add-rbac ]
+  pull_request:
+    branches: [ starter, add-authorization, add-rbac ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      - name: Build application
+        run: ./gradlew build
