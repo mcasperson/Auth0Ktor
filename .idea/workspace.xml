@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c3a7139-0a7b-49cb-b70d-8de3e254928d" name="Changes" comment="Fixed up readme">
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ktor-demo" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ktor-demo" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ktor-demo" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="starter" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tn75vRHSfrYYL322mgRtQetqoI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TF_FMT" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="ml.local.models.training.notification.expired" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunManager" selected="Ktor.ApplicationKt">
+    <configuration name="ApplicationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value=":test --tests &quot;com.mathewceron.ApplicationTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="tasksAndArguments" value=":test --tests &quot;com.mathewceron.ApplicationTest&quot;" />
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Auth0Ktor [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="build" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="tasksAndArguments" value="build" />
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ApplicationKt (1)" type="KtorApplicationConfigurationType" factoryName="Ktor">
+      <module name="ktor-demo.main" />
+      <option name="alternativeJrePath" value="" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="includeProvidedScope" value="true" />
+      <option name="mainClass" value="com.mathewceron.ApplicationKt" />
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="shortenCommandLine" />
+      <option name="vmParameters" value="" />
+      <option name="workingDirectory" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationKt" type="KtorApplicationConfigurationType" factoryName="Ktor">
+      <module name="ktor-demo.main" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="includeProvidedScope" value="true" />
+      <option name="mainClass" value="com.matthewcasperson.ApplicationKt" />
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="shortenCommandLine" value="NONE" />
+      <option name="vmParameters" value="" />
+      <option name="workingDirectory" value="" />
+      <envs>
+        <env name="CLIENT_ID" value="xP2E7TJYaKQmh5EyFPYCmtGuIC3Drbez" />
+        <env name="CLIENT_SECRET" value="iPbdgdPY3F_2anAEke053I8ne-App2UgS4Jmatnaqt3lPsxlPLClPgRtHtl14CLl" />
+        <env name="AUDIENCE" value="ktordemo" />
+        <env name="ISSUER" value="https://matthewcasperson.au.auth0.com/" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.Auth0Ktor [build]" />
+      <item itemvalue="Gradle.ApplicationTest" />
+      <item itemvalue="Ktor.ApplicationKt" />
+      <item itemvalue="Ktor.ApplicationKt (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Auth0Ktor [build]" />
+        <item itemvalue="Gradle.ApplicationTest" />
+        <item itemvalue="Gradle.Auth0Ktor [build]" />
+        <item itemvalue="Gradle.ApplicationTest" />
+        <item itemvalue="Gradle.Auth0Ktor [build]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c3a7139-0a7b-49cb-b70d-8de3e254928d" name="Changes" comment="" />
+      <created>1623392821531</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623392821531</updated>
+      <workItem from="1623392822917" duration="5917000" />
+      <workItem from="1623483538221" duration="1480000" />
+      <workItem from="1623560584757" duration="7844000" />
+      <workItem from="1623625802168" duration="11000" />
+      <workItem from="1623638437506" duration="10142000" />
+      <workItem from="1623815098913" duration="10520000" />
+      <workItem from="1623900813438" duration="143000" />
+    </task>
+    <task id="LOCAL-00001" summary="working on initial example">
+      <created>1623474060597</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623474060597</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed up auth 0 request">
+      <created>1623478816134</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623478816134</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Use JWT auth">
+      <created>1623561804259</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623561804259</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added key validation">
+      <created>1623564682199</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623564682199</updated>
+    </task>
+    <task id="LOCAL-00005" summary="reformatted files">
+      <created>1623564725012</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1623564725012</updated>
+    </task>
+    <task id="LOCAL-00006" summary="deall with null">
+      <created>1623564812181</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623564812181</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Used JWK for validation">
+      <created>1623565869994</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623565869994</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Don't need the certificate any more">
+      <created>1623565889456</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623565889456</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Don't need key utils any more">
+      <created>1623565937335</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623565937335</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Reformatted code">
+      <created>1623565997169</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1623565997169</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Reformatted code">
+      <created>1623566023524</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623566023524</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixed typo">
+      <created>1623576045526</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1623576045526</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Enabled cors">
+      <created>1623639539141</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1623639539141</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed hard coded string">
+      <created>1623639607848</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1623639607848</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixed namespace">
+      <created>1623647612107</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1623647612107</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixed test">
+      <created>1623649993979</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623649993979</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Reformatted file">
+      <created>1623650010229</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1623650010229</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed up build file">
+      <created>1623650371165</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1623650371165</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fixed up config file">
+      <created>1623650459968</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1623650459968</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added readme">
+      <created>1623651685470</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1623651685470</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Used the permissions claim for auth">
+      <created>1623731146150</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1623731146150</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Edited branch to only require a valid token">
+      <created>1623815230529</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1623815230530</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Removed all auth">
+      <created>1623815309718</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1623815309718</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added tests">
+      <created>1623815380165</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1623815380165</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added tests">
+      <created>1623815550746</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1623815550746</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added tests">
+      <created>1623815622632</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1623815622632</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Removed authorization header from the cors config">
+      <created>1623816736095</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1623816736095</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added Github workflow">
+      <created>1623819405115</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1623819405115</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added env vars">
+      <created>1623819887769</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1623819887769</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added env vars">
+      <created>1623819907934</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1623819907934</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Restored authorization header">
+      <created>1623821405091</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1623821405091</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Used allowCredentials = true instead">
+      <created>1623821638136</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1623821638136</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Used allowCredentials = true instead">
+      <created>1623821717938</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1623821717938</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Used allowCredentials = true instead">
+      <created>1623821734527</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1623821734527</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Renamed an argument">
+      <created>1623888840364</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623888840364</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Fixed empty lines">
+      <created>1623889089498</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1623889089498</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Fixed empty lines">
+      <created>1623889332342</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1623889332342</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Allow header">
+      <created>1623894072404</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1623894072404</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Allow header">
+      <created>1623894086608</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1623894086608</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Allow header">
+      <created>1623894099572</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1623894099572</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Fixed up readme">
+      <created>1623900920689</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1623900920689</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Don't need the certificate any more" />
+    <MESSAGE value="Don't need key utils any more" />
+    <MESSAGE value="Reformatted code" />
+    <MESSAGE value="Fixed typo" />
+    <MESSAGE value="Enabled cors" />
+    <MESSAGE value="Fixed hard coded string" />
+    <MESSAGE value="Fixed namespace" />
+    <MESSAGE value="Fixed test" />
+    <MESSAGE value="Reformatted file" />
+    <MESSAGE value="Fixed up build file" />
+    <MESSAGE value="Fixed up config file" />
+    <MESSAGE value="Added readme" />
+    <MESSAGE value="Used the permissions claim for auth" />
+    <MESSAGE value="Edited branch to only require a valid token" />
+    <MESSAGE value="Removed all auth" />
+    <MESSAGE value="Added tests" />
+    <MESSAGE value="Removed authorization header from the cors config" />
+    <MESSAGE value="Added Github workflow" />
+    <MESSAGE value="Added env vars" />
+    <MESSAGE value="Restored authorization header" />
+    <MESSAGE value="Used allowCredentials = true instead" />
+    <MESSAGE value="Renamed an argument" />
+    <MESSAGE value="Fixed empty lines" />
+    <MESSAGE value="Allow header" />
+    <MESSAGE value="Fixed up readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed up readme" />
+  </component>
+</project>
