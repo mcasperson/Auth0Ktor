@@ -19,4 +19,4 @@ export AUDIENCE=<api audience>
 
 Build with `./gradlew installDist`.
 
-Run with `./build/install/ktor-demo/bin/ktor-demo`.
+Run with `./build/install/com.matthewcasperson.ktor-demo/bin/com.matthewcasperson.ktor-demo`.
