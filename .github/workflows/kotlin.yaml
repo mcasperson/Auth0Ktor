@@ -24,7 +24,7 @@ jobs:
       - name: Build distribution
         run: ./gradlew installDist
       - name: Zip distribution
-        run: cd build\install\com.matthewcasperson.ktor-demo; zip -r ktordemo.zip .
+        run: cd build/install/com.matthewcasperson.ktor-demo; zip -r ktordemo.zip .
       - name: Create Release
         uses: actions/create-release@v1
         env:
@@ -38,6 +38,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build\install\com.matthewcasperson.ktor-demo\ktordemo.zip
+          asset_path: build/install/com.matthewcasperson.ktor-demo/ktordemo.zip
           asset_name: ktordemo.zip
           asset_content_type: application/zip
