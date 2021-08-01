@@ -26,6 +26,7 @@ jobs:
       - name: Zip distribution
         run: cd build/install/com.matthewcasperson.ktor-demo; zip -r ktordemo.zip .
       - name: Create Release
+        id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
